@@ -3,7 +3,9 @@
 }
 
 .bottom{
-    height: 40vh;
+    position: fixed;
+    bottom: 0px;
+    height: 50vh;
     overflow: scroll;
     font-family: monospace;
 }

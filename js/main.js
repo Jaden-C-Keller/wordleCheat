@@ -13,17 +13,24 @@ function start(){
     let board = document.getElementById("board");
 
     for (let i = 0; i < 5; i++) {
-        let row = new Row(document.createElement("div"));
+        let element = document.createElement("div");
+        let input = document.createElement("input");
+        input.type = "text";
+        input.id = "text" + i;
+        input.addEventListener("change", (event)=>{
+            set(event.target.id);
+        });
+        element.appendChild(input);
+        let row = new Row(element);
         rows.push(row);
         
         board.appendChild(row.element);
     }
 }
 
-function set(){
-    let rowNum = document.getElementById("rowSelect").value;
-    let word = document.getElementById("text").value;
-    updateWord.call(rows[rowNum], word);
+function set(id){
+    let word = document.getElementById(id).value;
+    updateWord.call(rows[Number(id.charAt(4))], word);
     updatePossible();
 }
 
@@ -38,5 +45,5 @@ function updatePossible(){
         }
     }
     
-    document.getElementById("right").innerHTML = list.toString();
+    document.getElementById("right").innerHTML = list.toString().replaceAll(",", " ");
 }
