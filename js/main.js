@@ -37,16 +37,6 @@ function updatePossible(){
             list = list.filter(word => (word.charAt(j) == box.letter) == (box.color == 2));
         }
     }
-
-    let string = ""
-
-    for(let i = 0; i < list.length; i++){
-        string += list[i] + " ";
-        if(i % 17 == 0){
-            string += "\n";
-        }
-    }
-
     
-    document.getElementById("right").innerHTML = string;
+    document.getElementById("right").innerHTML = list.toString();
 }

@@ -1,14 +1,9 @@
-.column{
-    height: 99vh;
-    float: left;
+.top{
+    height: 35vh;
 }
 
-.left{
-    width: 60%;
-}
-
-.right{
-    width: 40%;
+.bottom{
+    height: 60vh;
     overflow: scroll;
     font-family: monospace;
 }
