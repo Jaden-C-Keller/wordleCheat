@@ -33,12 +33,8 @@ function updatePossible(){
     for(let i = 0; i < 5; i++){
         for(let j = 0; j < 5; j++){
             let box = rows[i].boxes[j];
-            if(box.color == 0){
-                list = list.filter(word => !word.includes(box.letter));
-            }
-            else{
-                list = list.filter(word => (word.charAt(j) == box.letter) == (box.color == 2));
-            }
+            list = list.filter(word => box.color != 0 == word.includes(box.letter));
+            list = list.filter(word => (word.charAt(j) == box.letter) == (box.color == 2));
         }
     }
 
