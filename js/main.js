@@ -20,7 +20,7 @@ function start(){
         input.addEventListener("change", (event)=>{
             set(event.target.id);
         });
-        element.appendChild(input);
+        board.appendChild(input);
         let row = new Row(element);
         rows.push(row);
         

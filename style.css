@@ -5,9 +5,16 @@
 .bottom{
     position: fixed;
     bottom: 0px;
-    height: 50vh;
+    height: 55vh;
+    width: 99%;
     overflow: scroll;
     font-family: monospace;
+}
+
+@media (max-height: 700px){
+    .bottom{
+        height: 30vh;
+    }
 }
 
 .board{
